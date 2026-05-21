@@ -22,7 +22,14 @@ function App() {
 
       {/* NAVBAR */}
       <nav style={styles.nav}>
-        <h2 style={styles.logo}>Razors Web Studio</h2>
+        <div style={styles.brand}>
+          <img
+            src="/logo.png"
+            alt="Razors Logo"
+            style={styles.logoImg}
+          />
+          <h2 style={styles.logoText}>Razors Web Studio</h2>
+        </div>
 
         <div style={styles.links}>
           <a href="#services" style={styles.link}>Services</a>
@@ -36,7 +43,7 @@ function App() {
       <section style={styles.hero}>
         <h1 style={styles.title}>We Build Websites That Get Clients</h1>
         <p style={styles.subtitle}>
-          Modern, fast, and professional websites for businesses and brands.
+          Modern, fast, and professional websites for businesses.
         </p>
         <button style={styles.button}>Start Your Project</button>
       </section>
@@ -57,32 +64,9 @@ function App() {
         <h2 style={styles.title2}>Portfolio</h2>
 
         <div style={styles.grid}>
-          <div style={styles.projectCard}>
-            <img
-              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
-              style={styles.image}
-              alt=""
-            />
-            <h3>Business Website</h3>
-          </div>
-
-          <div style={styles.projectCard}>
-            <img
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71"
-              style={styles.image}
-              alt=""
-            />
-            <h3>E-Commerce Store</h3>
-          </div>
-
-          <div style={styles.projectCard}>
-            <img
-              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f"
-              style={styles.image}
-              alt=""
-            />
-            <h3>Portfolio Website</h3>
-          </div>
+          <div style={styles.card}>Business Website</div>
+          <div style={styles.card}>E-Commerce Store</div>
+          <div style={styles.card}>Portfolio Website</div>
         </div>
       </section>
 
@@ -91,20 +75,9 @@ function App() {
         <h2 style={styles.title2}>Pricing</h2>
 
         <div style={styles.grid}>
-          <div style={styles.card}>
-            <h3>Starter</h3>
-            <p>R999</p>
-          </div>
-
-          <div style={styles.card}>
-            <h3>Business</h3>
-            <p>R2499</p>
-          </div>
-
-          <div style={styles.card}>
-            <h3>Premium</h3>
-            <p>R4999</p>
-          </div>
+          <div style={styles.card}>Starter - R999</div>
+          <div style={styles.card}>Business - R2499</div>
+          <div style={styles.card}>Premium - R4999</div>
         </div>
       </section>
 
@@ -148,7 +121,7 @@ function App() {
 
       {/* WHATSAPP BUTTON */}
       <a
-        href="https://wa.me/0822027000"
+        href="https://wa.me/27YOURNUMBER"
         target="_blank"
         style={styles.whatsapp}
       >
@@ -163,7 +136,7 @@ function App() {
 const styles = {
   page: {
     fontFamily: "Arial",
-    background: "radial-gradient(circle at top, #1b1b2f, #0d0d0d)",
+    background: "#0d0d0d",
     color: "white",
     minHeight: "100vh"
   },
@@ -171,45 +144,59 @@ const styles = {
   nav: {
     display: "flex",
     justifyContent: "space-between",
+    alignItems: "center",
     padding: "15px 20px",
-    borderBottom: "1px solid rgba(255,255,255,0.1)",
+    background: "#111",
     position: "sticky",
     top: 0,
-    background: "#0d0d0d",
+    zIndex: 1000,
     flexWrap: "wrap"
   },
 
-  logo: { fontSize: "16px" },
+  brand: {
+    display: "flex",
+    alignItems: "center",
+    gap: "10px"
+  },
+
+  logoImg: {
+    width: "40px",
+    height: "40px",
+    borderRadius: "8px",
+    objectFit: "cover"
+  },
+
+  logoText: {
+    fontSize: "16px"
+  },
 
   links: {
     display: "flex",
-    gap: "10px",
+    gap: "15px",
     flexWrap: "wrap"
   },
 
   link: {
     color: "#ccc",
-    textDecoration: "none",
-    fontSize: "14px"
+    textDecoration: "none"
   },
 
   hero: {
     textAlign: "center",
-    padding: "90px 20px"
+    padding: "80px 20px"
   },
 
   title: {
-    fontSize: "34px",
-    marginBottom: "10px"
+    fontSize: "36px"
   },
 
   subtitle: {
     color: "#aaa",
-    maxWidth: "600px",
-    margin: "0 auto 20px"
+    marginTop: "10px"
   },
 
   button: {
+    marginTop: "20px",
     padding: "10px 20px",
     background: "white",
     color: "black",
@@ -219,50 +206,34 @@ const styles = {
   },
 
   section: {
-    padding: "70px 20px",
-    textAlign: "center"
+    padding: "60px 20px",
+    textAlign: "center",
+    background: "#111"
   },
 
   sectionDark: {
-    padding: "70px 20px",
+    padding: "60px 20px",
     textAlign: "center",
-    background: "#0b0b0f"
+    background: "#0b0b0b"
   },
 
   title2: {
-    fontSize: "26px",
-    marginBottom: "25px"
+    fontSize: "24px",
+    marginBottom: "20px"
   },
 
   grid: {
     display: "flex",
-    justifyContent: "center",
     gap: "15px",
+    justifyContent: "center",
     flexWrap: "wrap"
   },
 
   card: {
-    width: "220px",
-    padding: "15px",
-    background: "rgba(255,255,255,0.05)",
-    border: "1px solid rgba(255,255,255,0.1)",
-    borderRadius: "10px"
-  },
-
-  projectCard: {
-    width: "220px",
-    padding: "15px",
-    background: "rgba(255,255,255,0.05)",
-    border: "1px solid rgba(255,255,255,0.1)",
-    borderRadius: "10px"
-  },
-
-  image: {
-    width: "100%",
-    height: "140px",
-    objectFit: "cover",
+    background: "#1a1a1a",
+    padding: "20px",
     borderRadius: "10px",
-    marginBottom: "10px"
+    width: "200px"
   },
 
   form: {
@@ -289,8 +260,7 @@ const styles = {
   footer: {
     textAlign: "center",
     padding: "15px",
-    color: "#777",
-    borderTop: "1px solid rgba(255,255,255,0.1)"
+    color: "#777"
   },
 
   whatsapp: {
@@ -303,7 +273,7 @@ const styles = {
     borderRadius: "50px",
     textDecoration: "none",
     fontWeight: "bold",
-    boxShadow: "0 4px 10px rgba(0,0,0,0.3)"
+    zIndex: 9999
   }
 };
 
