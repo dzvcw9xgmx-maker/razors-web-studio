@@ -23,13 +23,8 @@ function App() {
       {/* NAVBAR */}
       <nav style={styles.nav}>
         <div style={styles.brand}>
-          <img
-            src="/logo.png"
-            alt="Razors Logo"
-            style={styles.logo}
-          />
-
-          <h2 style={styles.title}>Razors Web Studio</h2>
+          <img src="/logo.png" alt="Logo" style={styles.logo} />
+          <h2 style={styles.logoText}>Razors Web Studio</h2>
         </div>
 
         <div style={styles.links}>
@@ -42,14 +37,16 @@ function App() {
 
       {/* HERO */}
       <section style={styles.hero}>
-        <h1>We Build Websites That Get Clients</h1>
-        <p>Modern, fast, and professional websites for businesses.</p>
+        <h1 style={styles.heroTitle}>We Build Websites That Convert Visitors Into Clients</h1>
+        <p style={styles.heroText}>
+          Modern, fast, and professional websites for growing businesses.
+        </p>
         <button style={styles.button}>Start Your Project</button>
       </section>
 
       {/* SERVICES */}
       <section id="services" style={styles.section}>
-        <h2>Services</h2>
+        <h2 style={styles.sectionTitle}>Services</h2>
 
         <div style={styles.grid}>
           <div style={styles.card}>Web Development</div>
@@ -60,10 +57,10 @@ function App() {
 
       {/* PORTFOLIO */}
       <section id="work" style={styles.sectionDark}>
-        <h2>Portfolio</h2>
+        <h2 style={styles.sectionTitle}>Portfolio</h2>
 
         <div style={styles.grid}>
-          <div style={styles.card}>Business Website</div>
+          <div style={styles.card}>Corporate Website</div>
           <div style={styles.card}>E-Commerce Store</div>
           <div style={styles.card}>Portfolio Website</div>
         </div>
@@ -71,7 +68,7 @@ function App() {
 
       {/* PRICING */}
       <section id="pricing" style={styles.section}>
-        <h2>Pricing</h2>
+        <h2 style={styles.sectionTitle}>Pricing</h2>
 
         <div style={styles.grid}>
           <div style={styles.card}>Starter - R999</div>
@@ -82,7 +79,7 @@ function App() {
 
       {/* CONTACT */}
       <section id="contact" style={styles.sectionDark}>
-        <h2>Contact Us</h2>
+        <h2 style={styles.sectionTitle}>Contact Us</h2>
 
         <form onSubmit={handleSubmit} style={styles.form}>
           <input
@@ -120,7 +117,7 @@ function App() {
 
       {/* WHATSAPP BUTTON */}
       <a
-        href="https://wa.me/0822027000"
+        href="https://wa.me/27YOURNUMBER"
         target="_blank"
         style={styles.whatsapp}
       >
@@ -131,13 +128,13 @@ function App() {
   );
 }
 
-/* ===== STYLES ===== */
+/* ===== MODERN COLOUR SYSTEM ===== */
 const styles = {
+
   page: {
     fontFamily: "Arial",
-    background: "#0d0d0d",
-    color: "white",
-    minHeight: "100vh"
+    background: "#0b0f14",
+    color: "#ffffff"
   },
 
   nav: {
@@ -145,11 +142,11 @@ const styles = {
     justifyContent: "space-between",
     alignItems: "center",
     padding: "15px 20px",
-    background: "#111",
+    background: "#0f1720",
     position: "sticky",
     top: 0,
     zIndex: 1000,
-    flexWrap: "wrap"
+    borderBottom: "1px solid #1f2a37"
   },
 
   brand: {
@@ -159,14 +156,16 @@ const styles = {
   },
 
   logo: {
-    width: "40px",
-    height: "40px",
-    objectFit: "cover",
-    borderRadius: "8px"
+    width: "42px",
+    height: "42px",
+    borderRadius: "8px",
+    objectFit: "cover"
   },
 
-  title: {
-    fontSize: "16px"
+  logoText: {
+    fontSize: "16px",
+    color: "#ffffff",
+    fontWeight: "bold"
   },
 
   links: {
@@ -176,39 +175,69 @@ const styles = {
   },
 
   link: {
-    color: "#ccc",
-    textDecoration: "none"
+    color: "#cbd5e1",
+    textDecoration: "none",
+    fontSize: "14px"
   },
 
   hero: {
     textAlign: "center",
-    padding: "80px 20px"
+    padding: "90px 20px"
+  },
+
+  heroTitle: {
+    fontSize: "36px",
+    color: "#ffffff"
+  },
+
+  heroText: {
+    color: "#94a3b8",
+    marginTop: "10px"
+  },
+
+  button: {
+    marginTop: "20px",
+    padding: "12px 22px",
+    background: "#00d084",
+    color: "#0b0f14",
+    border: "none",
+    borderRadius: "8px",
+    cursor: "pointer",
+    fontWeight: "bold"
   },
 
   section: {
-    padding: "60px 20px",
+    padding: "70px 20px",
     textAlign: "center",
-    background: "#111"
+    background: "#0f1720"
   },
 
   sectionDark: {
-    padding: "60px 20px",
+    padding: "70px 20px",
     textAlign: "center",
-    background: "#0b0b0b"
+    background: "#0b0f14"
+  },
+
+  sectionTitle: {
+    fontSize: "26px",
+    color: "#ffffff",
+    marginBottom: "25px"
   },
 
   grid: {
     display: "flex",
-    gap: "15px",
     justifyContent: "center",
+    gap: "15px",
     flexWrap: "wrap"
   },
 
   card: {
-    background: "#1a1a1a",
+    width: "220px",
     padding: "20px",
-    borderRadius: "10px",
-    width: "200px"
+    background: "#111827",
+    border: "1px solid #1f2a37",
+    borderRadius: "12px",
+    color: "#e5e7eb"
   },
 
   form: {
@@ -220,22 +249,27 @@ const styles = {
   },
 
   input: {
-    padding: "10px",
+    padding: "12px",
     borderRadius: "6px",
-    border: "none"
+    border: "1px solid #1f2a37",
+    background: "#111827",
+    color: "#fff"
   },
 
   textarea: {
-    padding: "10px",
+    padding: "12px",
     borderRadius: "6px",
-    border: "none",
+    border: "1px solid #1f2a37",
+    background: "#111827",
+    color: "#fff",
     height: "100px"
   },
 
   footer: {
     textAlign: "center",
-    padding: "15px",
-    color: "#777"
+    padding: "20px",
+    color: "#64748b",
+    borderTop: "1px solid #1f2a37"
   },
 
   whatsapp: {
@@ -243,8 +277,8 @@ const styles = {
     bottom: "20px",
     right: "20px",
     background: "#25D366",
-    color: "white",
-    padding: "12px 16px",
+    color: "#fff",
+    padding: "14px 16px",
     borderRadius: "50px",
     textDecoration: "none",
     fontWeight: "bold",
