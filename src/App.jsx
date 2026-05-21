@@ -57,7 +57,6 @@ function App() {
         <h2 style={styles.title2}>Portfolio</h2>
 
         <div style={styles.grid}>
-
           <div style={styles.projectCard}>
             <img
               src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
@@ -84,7 +83,6 @@ function App() {
             />
             <h3>Portfolio Website</h3>
           </div>
-
         </div>
       </section>
 
@@ -147,6 +145,15 @@ function App() {
       <footer style={styles.footer}>
         © {new Date().getFullYear()} Razors Web Studio
       </footer>
+
+      {/* WHATSAPP BUTTON */}
+      <a
+        href="https://wa.me/0822027000"
+        target="_blank"
+        style={styles.whatsapp}
+      >
+        WhatsApp Us
+      </a>
 
     </div>
   );
@@ -284,6 +291,19 @@ const styles = {
     padding: "15px",
     color: "#777",
     borderTop: "1px solid rgba(255,255,255,0.1)"
+  },
+
+  whatsapp: {
+    position: "fixed",
+    bottom: "20px",
+    right: "20px",
+    background: "#25D366",
+    color: "white",
+    padding: "12px 16px",
+    borderRadius: "50px",
+    textDecoration: "none",
+    fontWeight: "bold",
+    boxShadow: "0 4px 10px rgba(0,0,0,0.3)"
   }
 };
 
