@@ -121,7 +121,7 @@ function App() {
 
       {/* WHATSAPP BUTTON */}
       <a
-        href="https://wa.me/27YOURNUMBER"
+        href="https://wa.me/0822027000"
         target="_blank"
         style={styles.whatsapp}
       >
