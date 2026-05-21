@@ -26,9 +26,10 @@ function App() {
           <img
             src="/logo.png"
             alt="Razors Logo"
-            style={styles.logoImg}
+            style={styles.logo}
           />
-          <h2 style={styles.logoText}>Razors Web Studio</h2>
+
+          <h2 style={styles.title}>Razors Web Studio</h2>
         </div>
 
         <div style={styles.links}>
@@ -41,16 +42,14 @@ function App() {
 
       {/* HERO */}
       <section style={styles.hero}>
-        <h1 style={styles.title}>We Build Websites That Get Clients</h1>
-        <p style={styles.subtitle}>
-          Modern, fast, and professional websites for businesses.
-        </p>
+        <h1>We Build Websites That Get Clients</h1>
+        <p>Modern, fast, and professional websites for businesses.</p>
         <button style={styles.button}>Start Your Project</button>
       </section>
 
       {/* SERVICES */}
       <section id="services" style={styles.section}>
-        <h2 style={styles.title2}>Services</h2>
+        <h2>Services</h2>
 
         <div style={styles.grid}>
           <div style={styles.card}>Web Development</div>
@@ -61,7 +60,7 @@ function App() {
 
       {/* PORTFOLIO */}
       <section id="work" style={styles.sectionDark}>
-        <h2 style={styles.title2}>Portfolio</h2>
+        <h2>Portfolio</h2>
 
         <div style={styles.grid}>
           <div style={styles.card}>Business Website</div>
@@ -72,7 +71,7 @@ function App() {
 
       {/* PRICING */}
       <section id="pricing" style={styles.section}>
-        <h2 style={styles.title2}>Pricing</h2>
+        <h2>Pricing</h2>
 
         <div style={styles.grid}>
           <div style={styles.card}>Starter - R999</div>
@@ -83,7 +82,7 @@ function App() {
 
       {/* CONTACT */}
       <section id="contact" style={styles.sectionDark}>
-        <h2 style={styles.title2}>Contact Us</h2>
+        <h2>Contact Us</h2>
 
         <form onSubmit={handleSubmit} style={styles.form}>
           <input
@@ -159,14 +158,14 @@ const styles = {
     gap: "10px"
   },
 
-  logoImg: {
+  logo: {
     width: "40px",
     height: "40px",
-    borderRadius: "8px",
-    objectFit: "cover"
+    objectFit: "cover",
+    borderRadius: "8px"
   },
 
-  logoText: {
+  title: {
     fontSize: "16px"
   },
 
@@ -186,25 +185,6 @@ const styles = {
     padding: "80px 20px"
   },
 
-  title: {
-    fontSize: "36px"
-  },
-
-  subtitle: {
-    color: "#aaa",
-    marginTop: "10px"
-  },
-
-  button: {
-    marginTop: "20px",
-    padding: "10px 20px",
-    background: "white",
-    color: "black",
-    border: "none",
-    borderRadius: "8px",
-    cursor: "pointer"
-  },
-
   section: {
     padding: "60px 20px",
     textAlign: "center",
@@ -215,11 +195,6 @@ const styles = {
     padding: "60px 20px",
     textAlign: "center",
     background: "#0b0b0b"
-  },
-
-  title2: {
-    fontSize: "24px",
-    marginBottom: "20px"
   },
 
   grid: {
